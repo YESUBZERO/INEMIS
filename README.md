@@ -1,16 +1,15 @@
-# Proyecto de Detección y Clasificación de Vehículos
+# Proyecto de Detección y Clasificación de Vehículos 🚗
 
 ## Descripción General
 Este proyecto utiliza modelos de inteligencia artificial para la detección, clasificación y análisis de vehículos a partir de videos o imágenes. Se implementa un flujo de trabajo que permite extraer imágenes de vehículos, clasificarlos en diferentes categorías y generar un informe con métricas y gráficos de emisiones y consumo de combustible.
 
-## Estructura del Proyecto
+## Estructura del Proyecto 🧱
 El proyecto consta de los siguientes archivos principales:
 
 - `app.py`: Se encarga de la extracción de imágenes desde un video, detectando vehículos mediante YOLO y almacenando la información en un archivo CSV.
 - `report.py`: Procesa los datos recogidos en el CSV y genera un informe en HTML con estadísticas y gráficos.
-- `constantes.csv`: Contiene los valores de consumo y emisiones de diferentes tipos de vehículos.
 
-## Requisitos Previos
+## Requisitos Previos ✅
 Antes de ejecutar el proyecto, asegúrese de tener instaladas las siguientes dependencias:
 
 ```bash
@@ -32,7 +31,7 @@ MODEL_TIER1_PATH=models/best_cl_t1.pt
 MODEL_PC_PATH=models/best_PC.pt
 ```
 
-### 2. Extracción de Imágenes
+### 2. Extracción de Imágenes 📷
 Ejecute en el mismo orden los siguientes comandos para procesar el video, extraer y clasificar imágenes de los vehículos detectados:
 
 Este servicio monitorea la carpeta results/images y clasifica las imagenes.
@@ -47,7 +46,7 @@ python app.py #1_extraction_service
 
 Las imágenes extraídas se almacenarán en la carpeta `results/images` y los datos en `vehicle_data.csv`.
 
-### 3. Generación de Reporte
+### 3. Generación de Reporte 📄
 Una vez extraídas las imágenes y clasificados los vehículos, ejecute el siguiente comando para generar el informe en HTML:
 
 ```bash
