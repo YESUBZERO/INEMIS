@@ -90,9 +90,4 @@ El reporte generado incluye múltiples gráficos que muestran información detal
 
 Estos análisis ayudan a evaluar la contaminación vehicular y proporcionar datos para futuras optimizaciones en el tráfico y la reducción de emisiones.
 
-## Contribuciones
-Si desea contribuir a este proyecto, puede realizar un `fork`, implementar mejoras y crear un `pull request` en el repositorio correspondiente.
-
-## Licencia
-Este proyecto se distribuye bajo la licencia MIT.
 
