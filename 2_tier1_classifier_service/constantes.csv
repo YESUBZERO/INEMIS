@@ -1,0 +1,5 @@
+﻿Type;Fuel;CO (g/kg fuel);NMVOC (g/kg fuel);NOx (g/kg fuel);PM (g/kg fuel);N2O (g/kg fuel);NH3 (g/kg fuel);IDP (g/kg fuel);BKF (g/kg fuel);CONSUMO (g/km)
+PC;Petrol;48.36;7.75;3.98;0.02;0.07;0.84;7.88E-06;4.56E-06;61.9
+LCV;Diesel;6.81;1.23;13.48;1.22;0.07;0.01;2.25E-05;2.12E-05;79.0
+HDV;Diesel;6.1;0.9;25.95;0.55;0.07;0.02;5.45E-06;3.37E-05;216.8
+L-CAT;Petrol;244.88;92.74;7.23;0.51;0.05;0.05;1.22E-05;6.13E-06;27.7
