@@ -33,10 +33,16 @@ MODEL_PC_PATH=models/best_PC.pt
 ```
 
 ### 2. Extracción de Imágenes
-Ejecute el siguiente comando para procesar el video y extraer imágenes de los vehículos detectados:
+Ejecute en el mismo orden los siguientes comandos para procesar el video, extraer y clasificar imágenes de los vehículos detectados:
 
+Este servicio monitorea la carpeta results/images y clasifica las imagenes.
 ```bash
-python app.py
+python app.py #2_tier1_classifier_service
+```
+
+Este servicio inicia el proceso de extracion de imagenes (cars, bus, trucks, motorcycle) y las guarda en results/images, al finalizar la extracion realiza el reporte HTML.
+```bash
+python app.py #1_extraction_service
 ```
 
 Las imágenes extraídas se almacenarán en la carpeta `results/images` y los datos en `vehicle_data.csv`.
