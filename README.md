@@ -50,6 +50,32 @@ python report.py
 
 El informe estará disponible en `results/reporte.html` e incluirá análisis visuales de emisiones y tipos de vehículos detectados.
 
+## Funcionamiento del Código
+
+### `app.py`
+1. Carga un modelo YOLO para detección de vehículos.
+2. Procesa un video y extrae imágenes de vehículos detectados.
+3. Clasifica los vehículos en categorías y almacena los datos en un CSV.
+4. Muestra la detección en tiempo real.
+
+### Algoritmo de Clasificación de Vehículos
+El proceso de clasificación se realiza en varias etapas:
+1. **Detección de vehículos**: Se usa un modelo YOLO preentrenado para identificar vehículos en las imágenes extraídas del video.
+2. **Clasificación Tier1**: Una vez detectados, los vehículos son clasificados en una categoría general (como automóvil, camión, etc.) usando un modelo YOLO específico para esta tarea (`best_cl_t1.pt`).
+3. **Subclasificación en PC**: Si el vehículo es clasificado como "PC" (Pasajeros), se utiliza un segundo modelo (`best_PC.pt`) para subclasificarlo en una categoría más específica.
+4. **Almacenamiento de resultados**: La información de clasificación se guarda en el archivo `vehicle_data.csv`, incluyendo:
+   - Nombre del vehículo
+   - Categoría Tier1
+   - Subcategoría PC (si aplica)
+   - Tipo de combustible y consumo estimado
+   - Emisiones estimadas basadas en datos del archivo `constantes.csv`.
+5. **Organización de archivos**: Las imágenes se mueven a carpetas específicas según la categoría de clasificación para facilitar su análisis.
+
+### `report.py`
+1. Carga los datos del CSV.
+2. Genera estadísticas y gráficos de emisiones por tipo de vehículo y combustible.
+3. Crea un informe en HTML con los resultados obtenidos.
+
 ## Análisis de Resultados
 El reporte generado incluye múltiples gráficos que muestran información detallada sobre las emisiones y la clasificación de vehículos:
 
@@ -64,3 +90,4 @@ Si desea contribuir a este proyecto, puede realizar un `fork`, implementar mejor
 
 ## Licencia
 Este proyecto se distribuye bajo la licencia MIT.
+
